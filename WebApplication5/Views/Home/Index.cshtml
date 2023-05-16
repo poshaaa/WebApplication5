@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <title>RsvpForm</title>
+</head>
+<body>
+    <h1 style="justify-content: center;" >Добавление нового заказа:</h1>
+    @using (Html.BeginForm())
+    {
+        <div style="display: flex; justify-content: center; margin: 3em">
+            <table>
+                <tr style="margin: 3em">
+                    <td>@Html.Label("Дата заказа:")</td>
+                    <td>@Html.TextBox("Дата")</td>
+                </tr>
+                <tr style="margin: 3em">
+                    <td>@Html.Label("ФИО Заказчика:")</td>
+                    <td>@Html.TextBox("Заказчик")</td>
+                </tr>
+                <tr style="margin: 3em">
+                    <td>@Html.Label("Номер телефона:")</td>
+                    <td>@Html.TextBox("Телефон")</td>
+                </tr>
+                <tr style="margin: 3em">
+                    <td>@Html.Label("Услуга:")</td>
+                    <td>@Html.DropDownList("Услуга", new SelectList(new[] { "Влажная уборка", "Вакуумная уборка", "Чистка ковров", "Паровая уборка" }))</td>
+                </tr>
+                <tr style="margin: 3em">
+                    <td>@Html.Label("Допуслуги:")</td>
+                    <td>@Html.CheckBox("Yes or No", false)</td>
+                </tr>
+                <tr style="margin: 3em">
+                    <td>@Html.Label("Отзыв:")</td>
+                    <td>@Html.TextBox("Отзыв", null, new { type = "number", min = "1", max = "5" })</td>
+                </tr>
+            </table>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button id="calculateButton" type="submit" name="action" value="Submit"> Подтвердить </button>
+        </div>
+
+    }
+</body>
+</html>

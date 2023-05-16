@@ -1,0 +1,91 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    background: #0f2027; /* fallback for old browsers */
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+button#calculateButton {
+    display: inline-block;
+    background-color: #013145;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 50px;
+    min-width: 140px;
+}
+
+    button#calculateButton :focus {
+        outline-color: transparent;
+        outline-style: solid;
+        box-shadow: 0 0 0 4px #5a01a7;
+        transition: 0.7s;
+    }
+
+    button#calculateButton :active {
+        background-color: #013145;
+    }
+
+    button#calculateButton:hover {
+        background-color: #5a01a7;
+        transition: 0.7s;
+    }
+
+.LabelStyle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+}
+
+.textBoxStyle {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+
+    .textBoxStyle + .LabelStyle {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateY(-4rem);
+        transform: translateY(-4rem);
+    }
+
+.nav {
+    display: inline-block;
+    background-color: azure;
+}
